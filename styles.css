@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.solar-system {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px rgba(255, 255, 0, 0.7);
+  z-index: 10;
+}
+
+.orbit {
+  position: absolute;
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: rotate-orbit 10s infinite linear;
+}
+
+#orbit-mercury {
+  width: 120px;
+  height: 120px;
+  animation-duration: 3s;
+}
+#orbit-venus {
+  width: 180px;
+  height: 180px;
+  animation-duration: 6s;
+}
+#orbit-earth {
+  width: 240px;
+  height: 240px;
+  animation-duration: 8s;
+}
+#orbit-mars {
+  width: 300px;
+  height: 300px;
+  animation-duration: 10s;
+}
+#orbit-jupiter {
+  width: 400px;
+  height: 400px;
+  animation-duration: 12s;
+}
+#orbit-saturn {
+  width: 480px;
+  height: 480px;
+  animation-duration: 14s;
+}
+#orbit-uranus {
+  width: 560px;
+  height: 560px;
+  animation-duration: 16s;
+}
+#orbit-neptune {
+  width: 640px;
+  height: 640px;
+  animation-duration: 18s;
+}
+
+.planet {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: gray;
+  animation: spin 5s infinite linear;
+}
+
+.mercury { background-color: #666; }
+.venus { background-color: #e5b067; }
+.earth { background-color: #2a9df4; }
+.mars { background-color: #e74c3c; }
+.jupiter { background-color: #f39c12; }
+.saturn { background-color: #f39c12; }
+.uranus { background-color: #1abc9c; }
+.neptune { background-color: #3498db; }
+
+@keyframes rotate-orbit {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
